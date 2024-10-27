@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matrices de transformation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <section>
+
+    <h1>Application d'une matrice de transformation</h1>
+
+    <p>On peut observer ci-dessous l'effet d'une 
+        <a href="script.js" target="_blank">matrice de transformation</a> 2 &times; 2 sur les dimensions d'un rectangle. Par défaut aucune transformation n'est appliquée car la configuration est celle d'une "matrice d'identité", multipliant simplement chaque composante du système à transformer par 1 et s'assurant qu'une composante n'aura pas d'influence sur les autres (rôle des valeurs 0).</p>
+
+    <p>Modifier les valeurs ci-dessous pour observer une transformation :</p>
+
+    <div id="formule">
+        <div>(</div>
+        <div class="ml" id="matrice">
+            <div>
+                <input id="matrice_1a" type="number" value="1">
+                <input id="matrice_1b" type="number" value="0">
+            </div>
+            <div>
+                <input id="matrice_2a" type="number" value="0">
+                <input id="matrice_2b" type="number" value="1">
+            </div>
+        </div>
+        <div>) <small>&times;</small> (</div>
+        <div class="ml">
+            <div><label for="largeur_base">Largeur L : </label><input id="largeur_base" type="number" value="250"></div>
+            <div><label for="hauteur_base">Hauteur H : </label><input id="hauteur_base" type="number" value="100"></div>
+        </div>
+        <div>) <small>=</small> (</div>
+        <div class="ml">
+            <div><label>L' : </label><span id="largeur_mod">?</span></div>
+            <div><label>H' : </label><span id="hauteur_mod">?</span></div>
+        </div>
+        <div>)</div>
+    </div>
+
+    <div id="calcul">
+        <p data-rappel="#largeur_mod" data-rappel-statique>L' = 
+            <span data-rappel="#matrice_1a">?</span> 
+            &times; 
+            <span data-rappel="#largeur_base">?</span> 
+            + 
+            <span data-rappel="#matrice_1b">?</span> 
+            &times; 
+            <span data-rappel="#hauteur_base">?</span>
+        </p>
+        <p data-rappel="#hauteur_mod" data-rappel-statique>H' = 
+            <span data-rappel="#matrice_2a">?</span> 
+            &times; 
+            <span data-rappel="#largeur_base">?</span> 
+            + 
+            <span data-rappel="#matrice_2b">?</span> 
+            &times; 
+            <span data-rappel="#hauteur_base">?</span>
+        </p>
+    </div>
+
+    </section>
+
+    <section id="conteneur_rect">
+
+        <div id="rect_mod">Modifié</div>
+        <div id="rect_base">Base</div>
+        
+    </section>
+
+    <script src="script.js"></script>
+    
+</body>
+</html>

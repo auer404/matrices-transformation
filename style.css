@@ -1,0 +1,155 @@
+ body {
+     font-family: sans-serif;
+     display: flex;
+     flex-direction: column;
+     height: 100vh;
+     margin: 0;
+ }
+
+ section {
+     padding: 5px;
+ }
+
+ h1 {
+     text-align: center;
+ }
+
+ p {
+     max-width: 700px;
+     margin-left: auto;
+     margin-right: auto;
+ }
+
+ #formule {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     margin-top: 40px;
+ }
+
+ #formule>div {
+     font-size: 40px;
+     font-weight: lighter;
+ }
+
+ label,
+ span,
+ small {
+     vertical-align: middle;
+ }
+
+ label {
+     color: lightgray;
+ }
+
+ #formule div.ml {
+     font-family: monospace;
+     font-size: 14px;
+     display: flex;
+     flex-direction: column;
+     gap: 5px;
+     padding: 5px;
+ }
+
+ small {
+     font-size: 15px;
+ }
+
+ input[type="number"] {
+     width: 40px;
+     text-align: center;
+     border: 1px solid transparent;
+     outline: none;
+     box-sizing: border-box;
+     border-bottom: 1px dotted lightgray;
+     -moz-appearance: textfield;
+ }
+
+ input[type="number"]:hover {
+     border: 1px dotted lightgray;
+ }
+
+ #matrice input[type="number"] {
+     width: 30px;
+ }
+
+ input::-webkit-outer-spin-button,
+ input::-webkit-inner-spin-button {
+     -webkit-appearance: none;
+     margin: 0;
+ }
+
+ span[data-rappel] {
+     cursor: default;
+     border: 1px solid transparent;
+     border-radius: 3px;
+ }
+
+ span[data-rappel]:hover,
+ span[data-rappel].actif {
+     border: 1px solid cyan;
+ }
+
+ p[data-rappel] {
+     width: fit-content;
+ }
+
+ p[data-rappel]:hover {
+     font-weight: bold;
+ }
+
+ .surbrillance {
+     background-color: cyan;
+     color: white;
+     border-bottom: 1px solid cyan;
+     border-radius: 3px;
+ }
+
+ span.surbrillance {
+     background-color: transparent;
+     color: inherit;
+     font-weight: bold;
+     border-bottom: none;
+     border-radius: 0;
+ }
+
+ #calcul {
+     margin-top: 40px;
+     font-family: monospace;
+     text-align: center;
+     font-size: 16px;
+ }
+
+ #conteneur_rect {
+     height: 100%;
+     position: relative;
+     border-top: 1px dotted lightgray;
+ }
+
+ #rect_base,
+ #rect_mod {
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     opacity: 0.5;
+     color: white;
+     padding: 5px;
+     box-sizing: border-box;
+     overflow: hidden;
+     transition: width 0.5s, height 0.5s;
+ }
+
+ #rect_base {
+     background-color: gray;
+ }
+
+ #rect_mod {
+     background-color: cyan;
+     text-align: right;
+ }
+
+ a {
+    color:midnightblue;
+ }
+
